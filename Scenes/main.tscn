@@ -1,12 +1,65 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqoypwldw4oug"]
+[gd_scene load_steps=8 format=3 uid="uid://cqoypwldw4oug"]
 
 [ext_resource type="Script" path="res://Scenes/character_body_2d.gd" id="1_pqhqc"]
+[ext_resource type="Texture2D" uid="uid://dmpsdwr5lcpns" path="res://sprites/png/player_left.ase.png" id="2_jejk4"]
+[ext_resource type="Texture2D" uid="uid://7tiipsejgtsq" path="res://sprites/png/player_down.ase.png" id="2_yj1ab"]
+[ext_resource type="Texture2D" uid="uid://sh54kcd13c68" path="res://sprites/png/player_right.ase.png" id="4_i7tvg"]
+[ext_resource type="Texture2D" uid="uid://dvn7gf2ehlxps" path="res://sprites/png/player_up.ase.png" id="5_wikwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c8xqo"]
 size = Vector2(16, 16)
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3mmbf"]
-size = Vector2(16, 16)
+[sub_resource type="SpriteFrames" id="SpriteFrames_u51qn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jejk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_yj1ab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_i7tvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wikwl")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yj1ab")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jejk4")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_i7tvg")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wikwl")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 
@@ -14,7 +67,9 @@ size = Vector2(16, 16)
 script = ExtResource("1_pqhqc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -8)
 shape = SubResource("RectangleShape2D_c8xqo")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = SubResource("PlaceholderTexture2D_3mmbf")
+[node name="CharacterSprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_u51qn")
+animation = &"walk_up"
