@@ -25,7 +25,7 @@ args = argparser.parse_args()
 
 ## Parameters
 class params:
-    path = args.path or os.path.join("sprites")
+    path = args.path or ""
     ase_dir = args.ase_dir or "ase"
     png_dir = args.png_dir or "png"
     hashfile = args.hashfile or os.path.join(path, ".hashes")

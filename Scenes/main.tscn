@@ -1,33 +1,17 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqoypwldw4oug"]
+[gd_scene load_steps=11 format=4 uid="uid://cqoypwldw4oug"]
 
 [ext_resource type="Script" path="res://Scenes/character_body_2d.gd" id="1_pqhqc"]
 [ext_resource type="Texture2D" uid="uid://dmpsdwr5lcpns" path="res://sprites/png/player_left.ase.png" id="2_jejk4"]
 [ext_resource type="Texture2D" uid="uid://7tiipsejgtsq" path="res://sprites/png/player_down.ase.png" id="2_yj1ab"]
 [ext_resource type="Texture2D" uid="uid://sh54kcd13c68" path="res://sprites/png/player_right.ase.png" id="4_i7tvg"]
 [ext_resource type="Texture2D" uid="uid://dvn7gf2ehlxps" path="res://sprites/png/player_up.ase.png" id="5_wikwl"]
+[ext_resource type="Texture2D" uid="uid://bkvum8nrnm7eh" path="res://sprites/png/couch_1.ase.png" id="6_62wj6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c8xqo"]
-size = Vector2(16, 16)
+size = Vector2(12, 8)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u51qn"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_jejk4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_yj1ab")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_i7tvg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_wikwl")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_yj1ab")
@@ -61,15 +45,35 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pfss7"]
+texture = ExtResource("6_62wj6")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -4, 12, -4, 12, 12, 8, 4, -8, 4, -12, 12)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -8, -8, -8, -8, 0, 8, 0, 8, -8, 12, -8, 12, 12, -12, 12)
+
+[sub_resource type="TileSet" id="TileSet_moo04"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_pfss7")
+
 [node name="Node2D" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+y_sort_enabled = true
 script = ExtResource("1_pqhqc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, -8)
+position = Vector2(0, -4)
 shape = SubResource("RectangleShape2D_c8xqo")
 
 [node name="CharacterSprite" type="AnimatedSprite2D" parent="CharacterBody2D"]
+y_sort_enabled = true
+position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_u51qn")
-animation = &"walk_up"
+animation = &"walk_down"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+y_sort_enabled = true
+tile_map_data = PackedByteArray("AAAEAAMAAAABAAAAAAAHAAMAAAABAAAAAAAMAAMAAAAAAAAAAAAOAAMAAAAAAAAAAAAPAAMAAAAAAAAAAAARAAMAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_moo04")
