@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccl1rfcxnkl21"
-path="res://.godot/imported/couch_1.ase.png-3568d5f8373e35d90a370de87cc1bcf4.ctex"
+path="res://.godot/imported/couch_1.ase.png-0668549af67fe3ba92ab52639fd245fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/png/couch_1.ase.png"
-dest_files=["res://.godot/imported/couch_1.ase.png-3568d5f8373e35d90a370de87cc1bcf4.ctex"]
+source_file="res://sprites/png/couch_1.ase.png"
+dest_files=["res://.godot/imported/couch_1.ase.png-0668549af67fe3ba92ab52639fd245fd.ctex"]
 
 [params]
 

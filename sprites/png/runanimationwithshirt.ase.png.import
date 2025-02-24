@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccl4cunv5d6f1"
-path="res://.godot/imported/player_up.ase.png-8ff9c7d7047c725703cb2746654133e8.ctex"
+uid="uid://bwbx1n0pxv1y6"
+path="res://.godot/imported/runanimationwithshirt.ase.png-d8a224a04967e8e2092c9f8a5716d62c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/png/player_up.ase.png"
-dest_files=["res://.godot/imported/player_up.ase.png-8ff9c7d7047c725703cb2746654133e8.ctex"]
+source_file="res://sprites/png/runanimationwithshirt.ase.png"
+dest_files=["res://.godot/imported/runanimationwithshirt.ase.png-d8a224a04967e8e2092c9f8a5716d62c.ctex"]
 
 [params]
 
