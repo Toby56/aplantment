@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=4 uid="uid://cqoypwldw4oug"]
 
 [ext_resource type="PackedScene" uid="uid://cuqn1q85u2p0k" path="res://Player/player.tscn" id="2_8422v"]
-[ext_resource type="Texture2D" uid="uid://bkvum8nrnm7eh" path="res://sprites/png/couch_1.ase.png" id="6_62wj6"]
+[ext_resource type="Texture2D" uid="uid://ccl1rfcxnkl21" path="res://sprites/png/couch_1.ase.png" id="6_62wj6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pfss7"]
 texture = ExtResource("6_62wj6")
@@ -27,5 +27,5 @@ position = Vector2(119, 68)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="y-sort"]
 y_sort_enabled = true
-tile_map_data = PackedByteArray("AAAEAAMAAAABAAAAAAAHAAMAAAABAAAAAAAMAAMAAAAAAAAAAAAOAAMAAAAAAAAAAAAPAAMAAAAAAAAAAAARAAMAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAEAAMAAAABAAAAAAAHAAMAAAABAAAAAAAMAAMAAAAAAAAAAAAOAAMAAAAAAAAAAAAPAAMAAAAAAAAAAAARAAMAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_moo04")
