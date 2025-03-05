@@ -11,17 +11,17 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.y = direction.y * SPEED
-		if velocity.y<0:
-			sprite.play("walk_up")
-		elif velocity.y>0:
-			sprite.play("walk_down")
+		velocity = Vector2(direction.x,direction.y).normalized()*SPEED
 		
-		if velocity.x>0:
+		
+		if direction.x>0:
 			sprite.play("walk_right")
-		elif velocity.x<0:
+		elif direction.x<0:
 			sprite.play("walk_left")
+		elif direction.y<0:
+			sprite.play("walk_up")
+		elif direction.y>0:
+			sprite.play("walk_down")
 		
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
