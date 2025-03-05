@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://g2vbe5tocoae"]
 
-[ext_resource type="Script" path="res://UI/inventory.gd" id="1_8ol8l"]
+[ext_resource type="Script" uid="uid://cn0e6vj0x4k2h" path="res://UI/inventory.gd" id="1_8ol8l"]
 [ext_resource type="Texture2D" uid="uid://c2olydhs8cin7" path="res://sprites/png/placeholder grid.png" id="2_7m3qn"]
 
 [sub_resource type="Gradient" id="Gradient_a1ys6"]

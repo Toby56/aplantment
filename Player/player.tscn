@@ -1,6 +1,6 @@
 [gd_scene load_steps=53 format=3 uid="uid://cuqn1q85u2p0k"]
 
-[ext_resource type="Script" path="res://Player/character_body_2d.gd" id="1_mm6gh"]
+[ext_resource type="Script" uid="uid://c7hfpccxql575" path="res://Player/character_body_2d.gd" id="1_mm6gh"]
 [ext_resource type="Texture2D" uid="uid://bwbx1n0pxv1y6" path="res://sprites/png/runanimationwithshirt.ase.png" id="2_ump7i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vetqy"]
