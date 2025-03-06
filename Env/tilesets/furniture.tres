@@ -1,0 +1,17 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://7aj04kh7g8hk"]
+
+[ext_resource type="Texture2D" uid="uid://ccl1rfcxnkl21" path="res://sprites/png/couch_1.ase.png" id="1_ux5qt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pfss7"]
+texture = ExtResource("1_ux5qt")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/y_sort_origin = -4
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -4, 12, -4, 12, 12, 8, 4, -8, 4, -12, 12)
+1:0/0 = 0
+1:0/0/y_sort_origin = 6
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -8, -8, -8, -8, 0, 8, 0, 8, -8, 12, -8, 12, 12, -12, 12)
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_pfss7")

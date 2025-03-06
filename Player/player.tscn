@@ -1,7 +1,9 @@
-[gd_scene load_steps=53 format=3 uid="uid://cuqn1q85u2p0k"]
+[gd_scene load_steps=55 format=3 uid="uid://cuqn1q85u2p0k"]
 
 [ext_resource type="Script" uid="uid://c7hfpccxql575" path="res://Player/character_body_2d.gd" id="1_mm6gh"]
+[ext_resource type="Resource" uid="uid://dp46fabci8qdm" path="res://Player/player_inventory.tres" id="2_btcbx"]
 [ext_resource type="Texture2D" uid="uid://bwbx1n0pxv1y6" path="res://sprites/png/runanimationwithshirt.ase.png" id="2_ump7i"]
+[ext_resource type="PackedScene" uid="uid://g2vbe5tocoae" path="res://UI/Inventory/player_inventory_UI.tscn" id="4_gwnis"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vetqy"]
 atlas = ExtResource("2_ump7i")
@@ -368,6 +370,7 @@ size = Vector2(8, 6)
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 script = ExtResource("1_mm6gh")
+Inv = ExtResource("2_btcbx")
 
 [node name="CharacterSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bppqu")
@@ -379,3 +382,12 @@ offset = Vector2(0, -16)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_x6pmg")
+
+[node name="Player_Inventory_UI" parent="." instance=ExtResource("4_gwnis")]
+visible = false
+z_index = 10
+z_as_relative = false
+offset_left = 1.0
+offset_top = -115.0
+offset_right = 1.0
+offset_bottom = -115.0

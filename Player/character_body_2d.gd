@@ -1,6 +1,8 @@
 extends CharacterBody2D
 @onready var sprite:AnimatedSprite2D = $CharacterSprite
 
+@export var Inv:Inventory
+
 const SPEED = 150.0
 
 

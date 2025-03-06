@@ -1,21 +1,7 @@
-[gd_scene load_steps=5 format=4 uid="uid://cqoypwldw4oug"]
+[gd_scene load_steps=3 format=4 uid="uid://cqoypwldw4oug"]
 
 [ext_resource type="PackedScene" uid="uid://cuqn1q85u2p0k" path="res://Player/player.tscn" id="2_8422v"]
-[ext_resource type="Texture2D" uid="uid://ccl1rfcxnkl21" path="res://sprites/png/couch_1.ase.png" id="6_62wj6"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pfss7"]
-texture = ExtResource("6_62wj6")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-0:0/0/y_sort_origin = -4
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -4, 12, -4, 12, 12, 8, 4, -8, 4, -12, 12)
-1:0/0 = 0
-1:0/0/y_sort_origin = 6
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12, -8, -8, -8, -8, 0, 8, 0, 8, -8, 12, -8, 12, 12, -12, 12)
-
-[sub_resource type="TileSet" id="TileSet_moo04"]
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_pfss7")
+[ext_resource type="TileSet" uid="uid://7aj04kh7g8hk" path="res://Env/tilesets/furniture.tres" id="2_bo1nx"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -23,9 +9,10 @@ sources/0 = SubResource("TileSetAtlasSource_pfss7")
 y_sort_enabled = true
 
 [node name="Player" parent="y-sort" instance=ExtResource("2_8422v")]
-position = Vector2(119, 68)
+position = Vector2(120, 89)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="y-sort"]
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAEAAMAAAABAAAAAAAHAAMAAAABAAAAAAAMAAMAAAAAAAAAAAAOAAMAAAAAAAAAAAAPAAMAAAAAAAAAAAARAAMAAAAAAAAAAAAFAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAKAAEAAAAAAAAAAAA=")
-tile_set = SubResource("TileSet_moo04")
+tile_set = ExtResource("2_bo1nx")
+metadata/_edit_lock_ = true
