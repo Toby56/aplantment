@@ -14,14 +14,21 @@ func _ready() -> void:
 	update_slots()
 
 func create_slots():
-	for i in range(inv.inv_items.size()):
+	for i in range(inv.inv_items.keys().size()):
 		var slot = inv_slot.instantiate()
 		grid.add_child(slot)
 	slots = grid.get_children()
+	for slot_button:TextureButton in slots:
+		slot_button.pressed.connect(on_slot_pressed.bind(slot_button))
+
+func on_slot_pressed(button):
+	print(button.is_empty())
 
 func update_slots():
-	for i in range(min(inv.inv_items.size(),slots.size())):
-		slots[i].update(inv.inv_items[i])
+	var items_in_inv = inv.inv_items.keys()
+	var values_in_inv = inv.inv_items.values()
+	for i in range(min(inv.inv_items.keys().size(),slots.size())):
+		slots[i].update(items_in_inv[i],values_in_inv[i])
 
 
 func _process(delta: float) -> void:

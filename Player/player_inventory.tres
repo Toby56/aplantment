@@ -6,5 +6,8 @@
 
 [resource]
 script = ExtResource("2_xh7dk")
-inv_items = Array[ExtResource("1_e7oj7")]([null, ExtResource("2_dw3ff"), null])
+inv_items = Dictionary[ExtResource("1_e7oj7"), int]({
+ExtResource("2_dw3ff"): 2,
+null: 0
+})
 metadata/_custom_type_script = "uid://cn0e6vj0x4k2h"

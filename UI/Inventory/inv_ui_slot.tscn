@@ -3,16 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://1jhdotifr1nb" path="res://sprites/png/slot_sprite.ase.png" id="1_riafb"]
 [ext_resource type="Script" uid="uid://bxgthckmpj2c7" path="res://UI/Inventory/inv_ui_slot.gd" id="1_u6b0v"]
 
-[node name="inv_ui_slot" type="Panel"]
-self_modulate = Color(1, 1, 1, 0)
+[node name="inv_ui_slot" type="TextureButton"]
 custom_minimum_size = Vector2(16, 16)
 offset_right = 16.0
 offset_bottom = 16.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_riafb")
+texture_pressed = ExtResource("1_riafb")
+texture_hover = ExtResource("1_riafb")
 script = ExtResource("1_u6b0v")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_riafb")
-centered = false
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -27,3 +26,17 @@ layout_mode = 2
 
 [node name="item_display" type="Sprite2D" parent="CenterContainer/Panel"]
 region_rect = Rect2(0, 0, 32, 32)
+
+[node name="Label" type="Label" parent="CenterContainer/Panel"]
+custom_minimum_size = Vector2(15, 17)
+layout_mode = 0
+offset_left = -2.0
+offset_top = -3.0
+offset_right = 13.0
+offset_bottom = 14.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 1
+vertical_alignment = 1
