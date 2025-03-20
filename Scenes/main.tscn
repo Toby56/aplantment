@@ -9,7 +9,7 @@
 y_sort_enabled = true
 
 [node name="Player" parent="y-sort" instance=ExtResource("2_8422v")]
-position = Vector2(120, 89)
+position = Vector2(240, 116)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="y-sort"]
 y_sort_enabled = true
