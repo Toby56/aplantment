@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://du4xjxgqhj24a"]
+
+[ext_resource type="Script" uid="uid://ceewmlc6ywcv1" path="res://start_game.gd" id="1_rt00k"]
+
+[node name="start_game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rt00k")
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 200.0
+offset_bottom = 311.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="load" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Load"
+
+[node name="delete" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Delete
+"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 0
+offset_left = 232.0
+offset_top = 16.0
+offset_right = 416.0
+offset_bottom = 311.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="load" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Load"
+
+[node name="delete" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Delete
+"
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 0
+offset_left = 440.0
+offset_top = 16.0
+offset_right = 624.0
+offset_bottom = 311.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="load" type="Button" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Load"
+
+[node name="delete" type="Button" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+text = "Delete
+"
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 320.0
+offset_right = 53.0
+offset_bottom = 351.0
+text = "Back"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
