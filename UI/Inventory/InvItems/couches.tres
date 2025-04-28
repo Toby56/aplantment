@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=4 format=3 uid="uid://dparo7en3qkwn"]
+
+[ext_resource type="Script" uid="uid://pyh67cn415pv" path="res://UI/Inventory/inv_item.gd" id="1_bffmb"]
+[ext_resource type="Texture2D" uid="uid://ccl1rfcxnkl21" path="res://Sprites/png/couch_1.ase.png" id="2_klp6k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bffmb"]
+atlas = ExtResource("2_klp6k")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+script = ExtResource("1_bffmb")
+name = "Couches"
+description = ""
+texture = SubResource("AtlasTexture_bffmb")
+stack_size = 8
+metadata/_custom_type_script = "uid://pyh67cn415pv"
